@@ -11,7 +11,7 @@ function App() {
   return (
       <div className="w-full bg-white h-screen p-4 mb-2">
           <div className="grid grid-cols-12 h-full">
-            <div className="col-start-3 col-span-8">
+            <div className="col-span-12 md:col-start-2 md:col-span-11 xl:col-start-3 xl:col-span-8 2xl:col-start-5 2xl:col-span-4">
                 <p className="text-gray-600 text-x13 font-normal uppercase 2xl::text-x15 3xl:text-base">Menu</p>
                 <div className="inline-flex mt-3">
                     <span className="text-gray-900 text-x13 font-[900] xl:text-base">Home&nbsp;/</span>
@@ -94,7 +94,7 @@ function App() {
                             </div>
                         </section>
                     </div>
-                    <div className="col-span-4 mt-4 xl:mt-12 ml-16">
+                    <div className="col-span-4 mt-4 xl:mt-12 ml-0 md:ml-4 xl:ml-8 2xl:ml-16">
                         <img src={me} alt="William Kamau" className="h-36 w-36 rounded-full" />
 
                         <p className="uppercase text-x8 font-[900] text-gray-600 mt-3 xl:mt-4 xl:text-x15">ONE-LINE SUMMARY(TL:DR)</p>
