@@ -1,15 +1,15 @@
-import React from "react";
-import { useState } from "react";
-import { RiCheckDoubleLine, RiFile2Line, RiGithubLine, RiMailLine, RiPhoneLine } from "react-icons/ri";
-import { Dialog } from '@headlessui/react'
+import React, {useState} from "react";
+import {RiCheckDoubleLine, RiFile2Line, RiGithubLine, RiMailLine, RiPhoneLine} from "react-icons/ri";
+import {Dialog} from '@headlessui/react'
 import './App.css';
 import me from './assets/images/me.svg';
 import ExperienceContainer from "./containers/experience";
+import {Section} from "./utils/enums";
 
 
 function App() {
-  const [section, setSection] = useState('home');
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [section, setSection] = useState<Section>(Section.home);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const onCloseModal = () => setIsModalOpen(false);
   return (
@@ -54,12 +54,12 @@ function App() {
                   <div className="col-span-12 md:col-start-2 md:col-span-11 xl:col-start-3 xl:col-span-8 2xl:col-start-4 2xl:col-span-5 3xl:col-start-5 3xl:col-span-4">
                       <p className="text-gray-600 text-x13 font-normal uppercase 2xl::text-x15 3xl:text-base">Menu</p>
                       <div className="inline-flex mt-3">
-                          <span className={`${section === 'home' ? 'text-rose-500' : 'text-gray-900'} text-x13 font-[900] xl:text-base cursor-pointer`} onClick={() => setSection('home')}>Home&nbsp;/</span>
-                          <span className={`${section === 'about' ? 'text-rose-500' : 'text-gray-900'} text-x13 font-[900] xl:text-base cursor-pointer`} onClick={() => setSection('about')}>About Me&nbsp;</span>
+                          <span className={`${section === Section.home ? 'text-rose-500' : 'text-gray-900'} text-x13 font-[900] xl:text-base cursor-pointer`} onClick={() => setSection(Section.home)}>Home&nbsp;/</span>
+                          <span className={`${section === Section.about ? 'text-rose-500' : 'text-gray-900'} text-x13 font-[900] xl:text-base cursor-pointer`} onClick={() => setSection(Section.about)}>About Me&nbsp;</span>
                           <span className="text-gray-900 text-x13 font-[900] xl:text-base">/&nbsp;</span>
-                          <span className={`${section === 'tech' ? 'text-rose-500' : 'text-gray-900'} text-x13 font-[900] xl:text-base cursor-pointer`} onClick={() => setSection('tech')}>Tech Stack&nbsp;</span>
+                          <span className={`${section === Section.tech ? 'text-rose-500' : 'text-gray-900'} text-x13 font-[900] xl:text-base cursor-pointer`} onClick={() => setSection(Section.tech)}>Tech Stack&nbsp;</span>
                           <span className="text-gray-900 text-x13 font-[900] xl:text-base">/&nbsp;</span>
-                          <span className={`${section === 'experience' ? 'text-rose-500' : 'text-gray-900'} text-x13 font-[900] xl:text-base cursor-pointer`} onClick={() => setSection('experience')}>Experience & Projects&nbsp;</span>
+                          <span className={`${section === Section.experience ? 'text-rose-500' : 'text-gray-900'} text-x13 font-[900] xl:text-base cursor-pointer`} onClick={() => setSection(Section.experience)}>Experience & Projects&nbsp;</span>
                       </div>
 
                       <div className="grid grid-cols-12">

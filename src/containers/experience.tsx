@@ -1,8 +1,9 @@
 import React from "react";
 import ExperienceComponent from "../components/Experience";
+import {Section} from "../utils/enums";
 
 interface ExperienceContainerProps {
-  section: string;
+  section: Section;
 }
 const ExperienceContainer = ({ section }: ExperienceContainerProps) => {
   return(

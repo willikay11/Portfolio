@@ -5,9 +5,10 @@ import solgates from '../../assets/images/solgates.svg';
 import brck from '../../assets/images/BRCK.png';
 import ajua from '../../assets/images/AJUA.png';
 import cytonn from '../../assets/images/cytonn.png';
+import {Section} from "../../utils/enums";
 
 interface ExperienceComponentProps {
-    section: string;
+    section: Section;
 }
 const ExperienceComponent = ({ section }: ExperienceComponentProps) => {
     const [projectType, setProjectType] = useState('work');
