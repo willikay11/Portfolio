@@ -14,31 +14,53 @@ const projects: Project[] = [
     type: ProjectType.work,
     title: 'Gapstack',
     image: gapstack,
-    description: 'This is some placeholder text. I am passionate about helping creatives and entrepreneurial'
+    description: 'This is some placeholder text. I am passionate about helping creatives and entrepreneurial',
+    canView: false,
+    imageWidth: 'auto'
   },
   {
     type: ProjectType.work,
     title: 'BRCK',
     image: brck,
-    description: 'This is some placeholder text. I am passionate about helping creatives and entrepreneurial'
+    description: 'This is some placeholder text. I am passionate about helping creatives and entrepreneurial',
+    canView: false,
+    imageWidth: 'auto'
   },
   {
     type: ProjectType.work,
     title: 'AJUA',
     image: ajua,
-    description: 'This is some placeholder text. I am passionate about helping creatives and entrepreneurial'
+    description: 'This is some placeholder text. I am passionate about helping creatives and entrepreneurial',
+    canView: false,
+    imageWidth: 'auto'
   },
   {
     type: ProjectType.work,
     title: 'Cytonn',
     image: cytonn,
-    description: 'This is some placeholder text. I am passionate about helping creatives and entrepreneurial'
+    description: 'This is some placeholder text. I am passionate about helping creatives and entrepreneurial',
+    canView: false,
+    imageWidth: '70px'
   },
   {
     type: ProjectType.personal,
-    title: 'Solgates',
+    title: 'Solgates Fashion',
     image: solgates,
-    description: 'This is some placeholder text. I am passionate about helping creatives and entrepreneurial'
+    secondaryImage: solgates,
+    description: 'This is some placeholder text. I am passionate about helping creatives and entrepreneurial',
+    canView: true,
+    imageWidth: '150px',
+    tech: ['React', 'Remix', 'Redis']
+  },
+  {
+    type: ProjectType.personal,
+    title: 'Solgates Component Library',
+    image: solgates,
+    secondaryImage: solgates,
+    description: 'This is some placeholder text. I am passionate about helping creatives and entrepreneurial',
+    canView: true,
+    imageWidth: '150px',
+    tech: ['Tailwind CSS', 'Headless UI', 'React']
   }
 ];
 
