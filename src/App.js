@@ -10,20 +10,19 @@ import {useState} from "react";
 
 function App() {
   const [projectType, setProjectType] = useState('work');
+  const [section, setSection] = useState('home');
   return (
       <div className="w-full bg-white h-screen p-4 mb-2">
           <div className="grid grid-cols-12 h-full">
             <div className="col-span-12 md:col-start-2 md:col-span-11 xl:col-start-3 xl:col-span-8 2xl:col-start-4 2xl:col-span-5 3xl:col-start-5 3xl:col-span-4">
                 <p className="text-gray-600 text-x13 font-normal uppercase 2xl::text-x15 3xl:text-base">Menu</p>
                 <div className="inline-flex mt-3">
-                    <span className="text-gray-900 text-x13 font-[900] xl:text-base">Home&nbsp;/</span>
-                    <span className="text-rose-500 text-x13 font-[900] xl:text-base">About Me&nbsp;</span>
+                    <span className={`${section === 'home' ? 'text-rose-500' : 'text-gray-900'} text-x13 font-[900] xl:text-base cursor-pointer`} onClick={() => setSection('home')}>Home&nbsp;/</span>
+                    <span className={`${section === 'about' ? 'text-rose-500' : 'text-gray-900'} text-x13 font-[900] xl:text-base cursor-pointer`} onClick={() => setSection('about')}>About Me&nbsp;</span>
                     <span className="text-gray-900 text-x13 font-[900] xl:text-base">/&nbsp;</span>
-                    <span className="text-rose-500 text-x13 font-[900] xl:text-base">Tech Stack&nbsp;</span>
+                    <span className={`${section === 'tech' ? 'text-rose-500' : 'text-gray-900'} text-x13 font-[900] xl:text-base cursor-pointer`} onClick={() => setSection('tech')}>Tech Stack&nbsp;</span>
                     <span className="text-gray-900 text-x13 font-[900] xl:text-base">/&nbsp;</span>
-                    <span className="text-rose-500 text-x13 font-[900] xl:text-base">Projects&nbsp;</span>
-                    <span className="text-gray-900 text-x13 font-[900] xl:text-base">/&nbsp;</span>
-                    <span className="text-rose-500 text-x13 font-[900] xl:text-base">Experience&nbsp;</span>
+                    <span className={`${section === 'experience' ? 'text-rose-500' : 'text-gray-900'} text-x13 font-[900] xl:text-base cursor-pointer`} onClick={() => setSection('experience')}>Experience & Projects&nbsp;</span>
                 </div>
 
                 <div className="grid grid-cols-12">
@@ -31,7 +30,7 @@ function App() {
                         <p className="text-gray-900 font-[900] text-4xl xl:text-4xl">Code Artist at Work</p>
                         <p className="text-gray-900 font-[900] text-4xl xl:text-4xl mt-2 xl:mt-4">Discover the <span className="text-rose-500">Artistry</span> of a Senior Engineer</p>
 
-                        <section>
+                        <section className={section === 'about' ? 'animate-jump' : ''}>
                             <p className="text-gray-900 uppercase text-x8 font-[900] mt-10 xl:text-x15">ABOUT ME</p>
 
                             <p className="text-gray-900 text-x13 mt-2.5 w-3/4 lg:text-sm">
@@ -39,7 +38,7 @@ function App() {
                             </p>
                         </section>
 
-                        <section>
+                        <section className={section === 'tech' ? 'animate-jump' : ''}>
                             <p className="text-gray-900 uppercase text-x8 font-[900] mt-10 xl:text-x15">TECH STACK</p>
 
                             <p className="text-gray-900 text-x13 mt-2.5 w-3/4 lg:text-sm">
@@ -47,15 +46,16 @@ function App() {
                             </p>
                             <div className="inline-flex mt-3">
                                 <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center"><RiCheckDoubleLine className="mr-1" />React</span>
-                                <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center"><RiCheckDoubleLine className="mr-1" />Angular</span>
-                                <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center"><RiCheckDoubleLine className="mr-1" />Flutter</span>
-                                <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center"><RiCheckDoubleLine className="mr-1" />Javascript</span>
+                                <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center"><RiCheckDoubleLine className="mr-1" />Typecript</span>
                                 <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center"><RiCheckDoubleLine className="mr-1" />Node JS</span>
+                                <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center"><RiCheckDoubleLine className="mr-1" />Javascript</span>
+                                <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center"><RiCheckDoubleLine className="mr-1" />Flutter</span>
                                 <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center"><RiCheckDoubleLine className="mr-1" />Remix</span>
+                                <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center"><RiCheckDoubleLine className="mr-1" />Angular</span>
                             </div>
                         </section>
 
-                        <section>
+                        <section className={section === 'experience' ? 'animate-jump' : ''}>
                             <div className="text-gray-900 uppercase text-x8 font-[900] mt-10 xl:text-x15">
                                 <span className={`${projectType === 'work' ? 'text-rose-500' : ''} cursor-pointer`} onClick={() => setProjectType('work')}>WORK EXPERIENCE</span>&nbsp;/&nbsp;
                                 <span className={`${projectType === 'personal' ? 'text-rose-500' : ''} cursor-pointer`} onClick={() => setProjectType('personal')}>PERSONAL PROJECTS</span>
