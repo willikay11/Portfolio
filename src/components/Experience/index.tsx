@@ -1,16 +1,12 @@
 import React, {useState} from "react";
-
-import gapstack from "../../assets/images/gapstack.png";
-import solgates from '../../assets/images/solgates.svg';
-import brck from '../../assets/images/BRCK.png';
-import ajua from '../../assets/images/AJUA.png';
-import cytonn from '../../assets/images/cytonn.png';
-import {Section} from "../../utils/enums";
+import {ProjectType, Section} from "../../utils/enums";
+import {Project} from "../../utils/interfaces";
 
 interface ExperienceComponentProps {
     section: Section;
+    projects: Project[]
 }
-const ExperienceComponent = ({ section }: ExperienceComponentProps) => {
+const ExperienceComponent = ({ section, projects }: ExperienceComponentProps) => {
     const [projectType, setProjectType] = useState('work');
 
     return(
@@ -22,43 +18,29 @@ const ExperienceComponent = ({ section }: ExperienceComponentProps) => {
         {
           projectType === 'work' ? (
               <div className="grid grid-cols-2 gap-6 mt-2.5">
-                <div>
-                  <img src={gapstack} className="mb-2" alt="Gapstack Logo"/>
-                  <p className="text-gray-900 text-x13 lg:text-sm">
-                    <strong>Gapstack:</strong> This is some placeholder text. I am passionate about helping creatives and entrepreneurial.
-                  </p>
-                </div>
-
-                <div>
-                  <img src={brck} className="mb-2" alt="BRCK Logo"/>
-
-                  <p className="text-gray-900 text-x13 lg:text-sm">
-                    <strong>BRCK:</strong> This is some placeholder text. I am passionate about helping creatives and entrepreneurial.
-                  </p>
-                </div>
-
-                <div>
-                  <img src={ajua} className="mb-2" alt="AJUA Logo"/>
-                  <p className="text-gray-900 text-x13 lg:text-sm">
-                    <strong>AJUA:</strong> This is some placeholder text. I am passionate about helping creatives and entrepreneurial.
-                  </p>
-                </div>
-
-                <div>
-                  <img src={cytonn} className="mb-2" alt="Cytonn Logo"/>
-                  <p className="text-gray-900 text-x13 lg:text-sm">
-                    <strong>Cytonn Investments:</strong> This is some placeholder text. I am passionate about helping creatives and entrepreneurial.
-                  </p>
-                </div>
+                  {
+                      projects?.filter((project) => project.type === ProjectType.work)?.map((project, index) => (
+                          <div key={`${project.title}-${index}`}>
+                              <img src={project.image} className="mb-2" alt={`${project.title} Logo`} />
+                              <p className="text-gray-900 text-x13 lg:text-sm">
+                                  <strong>{project.title}:</strong> {project.description}
+                              </p>
+                          </div>
+                      ))
+                  }
               </div>
           ) : (
               <div className="grid grid-cols-2 gap-6 mt-2.5">
-                <div>
-                  <img src={solgates} className="mb-2" alt="Solgates Logo"/>
-                  <p className="text-gray-900 text-x13 lg:text-sm">
-                    <strong>Solgates:</strong> This is some placeholder text. I am passionate about helping creatives and entrepreneurial.
-                  </p>
-                </div>
+                  {
+                      projects?.filter((project) => project.type === ProjectType.personal)?.map((project, index) => (
+                          <div key={`${project.title}-${index}`}>
+                              <img src={project.image} className="mb-2" alt={`${project.title} Logo`}/>
+                              <p className="text-gray-900 text-x13 lg:text-sm">
+                                  <strong>{project.title}:</strong> {project.description}
+                              </p>
+                          </div>
+                      ))
+                  }
               </div>
           )
         }
