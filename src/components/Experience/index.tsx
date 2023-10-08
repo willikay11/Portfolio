@@ -4,7 +4,7 @@ import {Project} from "../../utils/interfaces";
 import ProjectModal from "./ProjectModal";
 import {RiArrowRightUpLine} from "react-icons/ri";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Scrollbar, Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
