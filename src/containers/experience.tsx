@@ -47,6 +47,7 @@ const projects: Project[] = [
     canView: true,
     imageWidth: '150px',
     tech: ['React', 'Remix', 'Redis'],
+    link: 'https://solgates-fashion.fly.dev/',
     displayImages: [
         'https://res.cloudinary.com/drauzqmrk/image/upload/f_auto,q_auto/v1/solgates-fashion/ypexripvrsxkbowuqaqt',
         'https://res.cloudinary.com/drauzqmrk/image/upload/f_auto,q_auto/v1/solgates-fashion/nwgngwgo8chrr2vwzkfo',
