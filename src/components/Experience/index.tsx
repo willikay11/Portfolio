@@ -45,32 +45,34 @@ const ExperienceComponent = ({ section, projects }: ExperienceComponentProps) =>
                                 }
                             </div>
 
-                            <Swiper
-                                slidesPerView={'auto'}
-                                spaceBetween={30}
-                                pagination={{
-                                    clickable: true,
-                                }}
-                                modules={[Pagination]}
-                                className="visible md:hidden w-full h-full"
-                            >
-                                {
-                                    projects?.filter((project) => project.type === ProjectType.work)?.map((project, index) => (
-                                        <SwiperSlide key={`${project.title}-${index}`} className="!w-[80%] flex items-center justify-center pt-6">
-                                            <div className="flex flex-row items-center mb-2">
-                                                <img src={project.image} alt={`${project.title} Logo`}/>
-                                                <span className={`text-xs cursor-pointer hover:text-rose-500 ml-2.5 ${project.canView ? 'visible' : 'hidden'}`} onClick={() => setProject(project)}>
-                                                <RiArrowRightUpLine size={22} />
-                                            </span>
-                                            </div>
-                                            <p className="text-gray-900 text-x13 lg:text-sm">
-                                                <strong>{project.title}:</strong> {project.description}
-                                            </p>
-                                        </SwiperSlide>
-                                    ))
+                            <div className="visible md:hidden">
+                                <Swiper
+                                    slidesPerView={'auto'}
+                                    spaceBetween={30}
+                                    pagination={{
+                                        clickable: true,
+                                    }}
+                                    modules={[Pagination]}
+                                    className="w-full h-full"
+                                >
+                                    {
+                                        projects?.filter((project) => project.type === ProjectType.work)?.map((project, index) => (
+                                            <SwiperSlide key={`${project.title}-${index}`} className="!w-[80%] flex items-center justify-center pt-6">
+                                                <div className="flex flex-row items-center mb-2">
+                                                    <img src={project.image} alt={`${project.title} Logo`}/>
+                                                    <span className={`text-xs cursor-pointer hover:text-rose-500 ml-2.5 ${project.canView ? 'visible' : 'hidden'}`} onClick={() => setProject(project)}>
+                                                    <RiArrowRightUpLine size={22} />
+                                                </span>
+                                                </div>
+                                                <p className="text-gray-900 text-x13 lg:text-sm">
+                                                    <strong>{project.title}:</strong> {project.description}
+                                                </p>
+                                            </SwiperSlide>
+                                        ))
 
-                                }
-                            </Swiper>
+                                    }
+                                </Swiper>
+                            </div>
                         </>
                     ) : (
                         <>
@@ -91,32 +93,34 @@ const ExperienceComponent = ({ section, projects }: ExperienceComponentProps) =>
                                 }
                             </div>
 
-                            <Swiper
-                                slidesPerView={'auto'}
-                                spaceBetween={30}
-                                pagination={{
-                                    clickable: true,
-                                }}
-                                modules={[Pagination]}
-                                className="visible md:hidden w-full h-full"
-                            >
-                                {
-                                    projects?.filter((project) => project.type === ProjectType.personal)?.map((project, index) => (
-                                        <SwiperSlide key={`${project.title}-${index}`} className="!w-[80%] flex items-center justify-center pt-6">
-                                            <div className="flex flex-row items-center mb-2">
-                                                <img src={project.image} alt={`${project.title} Logo`}/>
-                                                <span className={`text-xs cursor-pointer hover:text-rose-500 ml-2.5 ${project.canView ? 'visible' : 'hidden'}`} onClick={() => setProject(project)}>
+                            <div className="visible md:hidden">
+                                <Swiper
+                                    slidesPerView={'auto'}
+                                    spaceBetween={30}
+                                    pagination={{
+                                        clickable: true,
+                                    }}
+                                    modules={[Pagination]}
+                                    className="w-full h-full"
+                                >
+                                    {
+                                        projects?.filter((project) => project.type === ProjectType.personal)?.map((project, index) => (
+                                            <SwiperSlide key={`${project.title}-${index}`} className="!w-[80%] flex items-center justify-center pt-6">
+                                                <div className="flex flex-row items-center mb-2">
+                                                    <img src={project.image} alt={`${project.title} Logo`}/>
+                                                    <span className={`text-xs cursor-pointer hover:text-rose-500 ml-2.5 ${project.canView ? 'visible' : 'hidden'}`} onClick={() => setProject(project)}>
                                                 <RiArrowRightUpLine size={22} />
                                             </span>
-                                            </div>
-                                            <p className="text-gray-900 text-x13 lg:text-sm">
-                                                <strong>{project.title}:</strong> {project.description}
-                                            </p>
-                                        </SwiperSlide>
-                                    ))
+                                                </div>
+                                                <p className="text-gray-900 text-x13 lg:text-sm">
+                                                    <strong>{project.title}:</strong> {project.description}
+                                                </p>
+                                            </SwiperSlide>
+                                        ))
 
-                                }
-                            </Swiper>
+                                    }
+                                </Swiper>
+                            </div>
                         </>
                     )
                 }
