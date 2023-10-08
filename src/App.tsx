@@ -24,40 +24,40 @@ function App() {
                           <span className={`${section === Section.experience ? 'text-rose-500' : 'text-gray-900'} text-x13 font-[900] xl:text-base cursor-pointer`} onClick={() => setSection(Section.experience)}>Experience & Projects&nbsp;</span>
                       </div>
 
-                      <div className="grid grid-cols-12">
-                          <div className="col-span-8 mt-4 xl:mt-8">
+                      <div className="grid grid-cols-12 mb-8">
+                          <div className="col-span-12 mt-4 md:col-span-8 xl:mt-8">
                               <p className="text-gray-900 font-[900] text-4xl xl:text-4xl">Code Artist at Work</p>
                               <p className="text-gray-900 font-[900] text-4xl xl:text-4xl mt-2 xl:mt-4">Discover the <span className="text-rose-500">Artistry</span> of a Senior Engineer</p>
 
                               <section className={section === 'about' ? 'animate-jump' : ''}>
-                                  <p className="text-gray-900 uppercase text-x8 font-[900] mt-10 xl:text-x15">ABOUT ME</p>
+                                  <p className="text-gray-900 uppercase text-x13 md:text-x8 font-[900] mt-10 xl:text-x15">ABOUT ME</p>
 
-                                  <p className="text-gray-900 text-x13 mt-2.5 w-3/4 lg:text-sm">
+                                  <p className="text-gray-900 text-x13 mt-2.5 w-full md:w-3/4 lg:text-sm">
                                       Hello, my name is William, a passionate code craftsman who believes that love is at the heart of his work. With years of experience in the tech industry, my dedication to my craft shines through in every project I touch. My commitment to excellence and attention to detail are evident in the elegant products I creat, where each line of code is meticulously crafted with care.
                                   </p>
                               </section>
 
                               <section className={section === 'tech' ? 'animate-jump' : ''}>
-                                  <p className="text-gray-900 uppercase text-x8 font-[900] mt-10 xl:text-x15">TECH STACK</p>
+                                  <p className="text-gray-900 uppercase text-x13 md:text-x8 font-[900] mt-10 xl:text-x15">TECH STACK</p>
 
-                                  <p className="text-gray-900 text-x13 mt-2.5 w-3/4 lg:text-sm">
+                                  <p className="text-gray-900 text-x13 mt-2.5 w-full md:w-3/4 lg:text-sm">
                                       My frontend tech stack is a robust arsenal of cutting-edge technologies, ensuring I can create immersive and responsive user interfaces
                                   </p>
-                                  <div className="inline-flex mt-3">
-                                      <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center"><RiCheckDoubleLine className="mr-1" />React</span>
-                                      <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center"><RiCheckDoubleLine className="mr-1" />Typecript</span>
-                                      <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center"><RiCheckDoubleLine className="mr-1" />Node JS</span>
-                                      <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center"><RiCheckDoubleLine className="mr-1" />Javascript</span>
-                                      <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center"><RiCheckDoubleLine className="mr-1" />Flutter</span>
-                                      <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center"><RiCheckDoubleLine className="mr-1" />Remix</span>
-                                      <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center"><RiCheckDoubleLine className="mr-1" />Angular</span>
+                                  <div className="inline-flex flex-wrap mt-3">
+                                      <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center mt-1 md:mt-0"><RiCheckDoubleLine className="mr-1" />React</span>
+                                      <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center mt-1 md:mt-0"><RiCheckDoubleLine className="mr-1" />Typecript</span>
+                                      <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center mt-1 md:mt-0"><RiCheckDoubleLine className="mr-1" />Node JS</span>
+                                      <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center mt-1 md:mt-0"><RiCheckDoubleLine className="mr-1" />Javascript</span>
+                                      <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center mt-1 md:mt-0"><RiCheckDoubleLine className="mr-1" />Flutter</span>
+                                      <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center mt-1 md:mt-0"><RiCheckDoubleLine className="mr-1" />Remix</span>
+                                      <span className="mr-2 text-gray-900 text-x13 lg:text-sm inline-flex items-center mt-1 md:mt-0"><RiCheckDoubleLine className="mr-1" />Angular</span>
                                   </div>
                               </section>
 
                               <ExperienceContainer section={section} />
 
                           </div>
-                          <div className="col-span-4 mt-4 xl:mt-12 ml-0 md:ml-4 xl:ml-8 2xl:ml-16">
+                          <div className="col-span-12 mt-4 ml-0 md:col-span-4 md:ml-4 xl:mt-12 xl:ml-8 2xl:ml-16">
                               <img src={me} alt="William Kamau" className="h-36 w-36 rounded-full" />
 
                               <p className="uppercase text-x8 font-[900] text-gray-600 mt-3 xl:mt-4 xl:text-x15">ONE-LINE SUMMARY(TL:DR)</p>

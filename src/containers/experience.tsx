@@ -43,17 +43,23 @@ const projects: Project[] = [
     title: 'Solgates Fashion',
     image: solgates,
     secondaryImage: solgates,
-    description: 'Built the customer facing ecommerce website and the internal admin platform',
+    description: 'Built the customer facing ecommerce website and the internal admin platform.',
     canView: true,
     imageWidth: '150px',
-    tech: ['React', 'Remix', 'Redis']
+    tech: ['React', 'Remix', 'Redis'],
+    displayImages: [
+        'https://res.cloudinary.com/drauzqmrk/image/upload/f_auto,q_auto/v1/solgates-fashion/ypexripvrsxkbowuqaqt',
+        'https://res.cloudinary.com/drauzqmrk/image/upload/f_auto,q_auto/v1/solgates-fashion/nwgngwgo8chrr2vwzkfo',
+        'https://res.cloudinary.com/drauzqmrk/image/upload/f_auto,q_auto/v1/solgates-fashion/ylndl9hd7ofk4ogmh1n1',
+        'https://res.cloudinary.com/drauzqmrk/image/upload/f_auto,q_auto/v1/solgates-fashion/ajnrojop5ngrjs6cxph7',
+    ]
   },
   {
     type: ProjectType.personal,
     title: 'Solgates Component Library',
     image: solgates,
     secondaryImage: solgates,
-    description: 'Built the component ',
+    description: 'Built the component to ensure consistency through out the entire ecommerce platform.',
     canView: true,
     imageWidth: '150px',
     tech: ['Tailwind CSS', 'Headless UI', 'React'],

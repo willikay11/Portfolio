@@ -33,7 +33,7 @@ module.exports = {
     extend: {
       fontSize: {
         'sm': ['0.875rem', '1.5rem'],
-        'x13': ['0.8125rem', '1.125rem'],
+        'x13': ['0.8125rem', '1.5rem'],
         'x8': ['0.5rem', '1rem'],
         'x15': ['0.8rem', "1.2rem"]
       },

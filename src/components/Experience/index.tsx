@@ -15,7 +15,7 @@ const ExperienceComponent = ({ section, projects }: ExperienceComponentProps) =>
         <>
             <ProjectModal project={project} onClose={() => setProject(null)} />
             <section className={section === 'experience' ? 'animate-jump' : ''}>
-                <div className="text-gray-900 uppercase text-x8 font-[900] mt-10 xl:text-x15">
+                <div className="text-gray-900 uppercase text-x13 md:text-x8 font-[900] mt-10 xl:text-x15">
                     <span className={`${projectType === 'work' ? 'text-rose-500' : ''} cursor-pointer`} onClick={() => setProjectType('work')}>WORK EXPERIENCE</span>&nbsp;/&nbsp;
                     <span className={`${projectType === 'personal' ? 'text-rose-500' : ''} cursor-pointer`} onClick={() => setProjectType('personal')}>PERSONAL PROJECTS</span>
                 </div>
