@@ -19,7 +19,6 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
 
     const onCloseModal = () => {
         onClose();
-        // setIsModalOpen(false)
     };
 
     useEffect(() => {
@@ -35,7 +34,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
             <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur" />
             <div className="fixed inset-0 overflow-y-auto">
                 <div className="grid grid-cols-12 h-full">
-                    <div className="col-span-12 md:col-start-2 md:col-span-11 xl:col-start-4 xl:col-span-6 2xl:col-start-4 2xl:col-span-5 3xl:col-start-5 3xl:col-span-4">
+                    <div className="col-span-12 md:col-start-2 md:col-span-11 xl:col-start-3 xl:col-span-8 2xl:col-start-4 2xl:col-span-5 3xl:col-start-5 3xl:col-span-4">
                         <div className="flex min-h-full pt-24 text-center">
                             <Dialog.Panel className="animate-fade-up w-full transform overflow-hidden rounded-t-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                                 <div className="flex flex-row justify-between items-center border-b-[1px] border-[#f4f4f4] pb-4">
@@ -69,12 +68,11 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                                             modules={[Scrollbar]}
                                             className="w-full h-full"
                                         >
-                                            <SwiperSlide className="rounded-2xl !w-3/4 bg-orange-200 flex items-center justify-center">Slide 1</SwiperSlide>
-                                            <SwiperSlide className="rounded-2xl !w-3/4 bg-orange-200 flex items-center justify-center">Slide 2</SwiperSlide>
-                                            <SwiperSlide className="rounded-2xl !w-3/4 bg-orange-200 flex items-center justify-center">Slide 3</SwiperSlide>
-                                            <SwiperSlide className="rounded-2xl !w-3/4 bg-orange-200 flex items-center justify-center">Slide 4</SwiperSlide>
-                                            <SwiperSlide className="rounded-2xl !w-3/4 bg-orange-200 flex items-center justify-center">Slide 5</SwiperSlide>
-                                            <SwiperSlide className="rounded-2xl !w-3/4 bg-orange-200 flex items-center justify-center">Slide 6</SwiperSlide>
+                                            {project?.displayImages?.map((image, index) =>
+                                                <SwiperSlide key={index} className="rounded-2xl !w-[80%] bg-orange-100 flex items-center justify-center pt-8 pl-8 pr-8">
+                                                    <img src={image} alt="1" />
+                                                </SwiperSlide>
+                                            )}
                                         </Swiper>
                                     </div>
 

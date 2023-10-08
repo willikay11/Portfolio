@@ -14,40 +14,36 @@ const projects: Project[] = [
     type: ProjectType.work,
     title: 'Gapstack',
     image: gapstack,
-    description: 'This is some placeholder text. I am passionate about helping creatives and entrepreneurial',
+    description: 'Lead the engineering team in building the trade finance platform and the API gateway with are been actively used by the clients.',
     canView: false,
-    imageWidth: 'auto'
   },
   {
     type: ProjectType.work,
     title: 'BRCK',
     image: brck,
-    description: 'This is some placeholder text. I am passionate about helping creatives and entrepreneurial',
+    description: 'Reworked the internal content repository and distribution platform which led to easier management of content',
     canView: false,
-    imageWidth: 'auto'
   },
   {
     type: ProjectType.work,
     title: 'AJUA',
     image: ajua,
-    description: 'This is some placeholder text. I am passionate about helping creatives and entrepreneurial',
+    description: 'Worked with other engineers to build, test and deploy the customer analytics platform',
     canView: false,
-    imageWidth: 'auto'
   },
   {
     type: ProjectType.work,
     title: 'Cytonn',
     image: cytonn,
-    description: 'This is some placeholder text. I am passionate about helping creatives and entrepreneurial',
+    description: 'Built their customer facing mobile application using react native.',
     canView: false,
-    imageWidth: '70px'
   },
   {
     type: ProjectType.personal,
     title: 'Solgates Fashion',
     image: solgates,
     secondaryImage: solgates,
-    description: 'This is some placeholder text. I am passionate about helping creatives and entrepreneurial',
+    description: 'Built the customer facing ecommerce website and the internal admin platform',
     canView: true,
     imageWidth: '150px',
     tech: ['React', 'Remix', 'Redis']
@@ -57,10 +53,17 @@ const projects: Project[] = [
     title: 'Solgates Component Library',
     image: solgates,
     secondaryImage: solgates,
-    description: 'This is some placeholder text. I am passionate about helping creatives and entrepreneurial',
+    description: 'Built the component ',
     canView: true,
     imageWidth: '150px',
-    tech: ['Tailwind CSS', 'Headless UI', 'React']
+    tech: ['Tailwind CSS', 'Headless UI', 'React'],
+    link: 'https://willikay11.github.io/solgates-component-library',
+    displayImages: [
+        'https://res.cloudinary.com/drauzqmrk/image/upload/f_auto,q_auto/v1/solgates-component-library/mrtx0pqpnawbh6pmgywv',
+        'https://res.cloudinary.com/drauzqmrk/image/upload/f_auto,q_auto/v1/solgates-component-library/sr8blskbrfchsk4xcrrp',
+        'https://res.cloudinary.com/drauzqmrk/image/upload/f_auto,q_auto/v1/solgates-component-library/rrquk8dxcsa8969r1d57',
+        'https://res.cloudinary.com/drauzqmrk/image/upload/f_auto,q_auto/v1/solgates-component-library/fjdgsar7g4lubsxid4jp'
+    ]
   }
 ];
 

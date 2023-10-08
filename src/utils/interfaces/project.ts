@@ -6,8 +6,9 @@ export interface Project {
     title: string,
     description: string,
     canView: boolean,
-    imageWidth: string,
+    imageWidth?: string,
     secondaryImage?: string,
+    displayImages?: string[],
     tech?: string[],
     link?: string,
     images?: string[]
