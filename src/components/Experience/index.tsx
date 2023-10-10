@@ -16,9 +16,13 @@ interface ExperienceComponentProps {
 const ExperienceComponent = ({ section, projects }: ExperienceComponentProps) => {
     const [projectType, setProjectType] = useState('work');
     const [project, setProject] = useState<Project | null>(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return(
         <>
-            <ProjectModal project={project} onClose={() => setProject(null)} />
+            <ProjectModal open={isModalOpen} project={project} onClose={() => {
+                setIsModalOpen(false);
+            }} />
             <section className={section === 'experience' ? 'animate-jump' : ''}>
                 <div className="text-gray-900 uppercase text-x13 md:text-x8 font-[900] mt-10 xl:text-x15">
                     <span className={`${projectType === 'work' ? 'text-rose-500' : ''} cursor-pointer`} onClick={() => setProjectType('work')}>WORK EXPERIENCE</span>&nbsp;/&nbsp;
@@ -60,7 +64,10 @@ const ExperienceComponent = ({ section, projects }: ExperienceComponentProps) =>
                                             <SwiperSlide key={`${project.title}-${index}`} className="!w-[80%] flex items-center justify-center pt-6">
                                                 <div className="flex flex-row items-center mb-2">
                                                     <img src={project.image} alt={`${project.title} Logo`}/>
-                                                    <span className={`text-xs cursor-pointer hover:text-rose-500 ml-2.5 ${project.canView ? 'visible' : 'hidden'}`} onClick={() => setProject(project)}>
+                                                    <span className={`text-xs cursor-pointer hover:text-rose-500 ml-2.5 ${project.canView ? 'visible' : 'hidden'}`} onClick={() => {
+                                                        setProject(project);
+                                                        setIsModalOpen(true);
+                                                    }}>
                                                     <RiArrowRightUpLine size={22} />
                                                 </span>
                                                 </div>
@@ -82,7 +89,10 @@ const ExperienceComponent = ({ section, projects }: ExperienceComponentProps) =>
                                         <div key={`${project.title}-${index}`}>
                                             <div className="flex flex-row items-center mb-2">
                                                 <img src={project.image} alt={`${project.title} Logo`}/>
-                                                <span className={`text-xs cursor-pointer hover:text-rose-500 ml-2.5 ${project.canView ? 'visible' : 'hidden'}`} onClick={() => setProject(project)}>
+                                                <span className={`text-xs cursor-pointer hover:text-rose-500 ml-2.5 ${project.canView ? 'visible' : 'hidden'}`} onClick={() => {
+                                                    setProject(project);
+                                                    setIsModalOpen(true);
+                                                }}>
                                                 <RiArrowRightUpLine size={22} />
                                             </span>                                        </div>
                                             <p className="text-gray-900 text-x13 lg:text-sm">
