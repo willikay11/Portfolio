@@ -4,7 +4,7 @@ name: Deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -37,7 +37,7 @@ jobs:
         with:
           node-version: 16.x
       - name: Installing NPM packages
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
       - name: Building project
         run: npm run build
