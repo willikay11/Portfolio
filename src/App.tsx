@@ -1,17 +1,13 @@
 import React, {useState} from "react";
-import ReactGA from 'react-ga';
 import {RiCheckDoubleLine, RiFile2Line, RiGithubLine, RiMailLine, RiPhoneLine} from "react-icons/ri";
 import './App.css';
 import me from './assets/images/me.svg';
 import ExperienceContainer from "./containers/experience";
 import {Section} from "./utils/enums";
 
-const TRACKING_ID = "G-XENPRLC7BK";
-ReactGA.initialize(TRACKING_ID);
 
 function App() {
     const [section, setSection] = useState<Section>(Section.home);
-
     return (
         <>
             <div className="w-full bg-white h-screen p-4 mb-2">
