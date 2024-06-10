@@ -5,9 +5,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+ReactGA.initialize("G-XENPRLC7BK", {testMode: true});
+
 // @ts-ignore
 const root = ReactDOM.createRoot(document.getElementById('root'));
-ReactGA.initialize("G-XENPRLC7BK");
 
 root.render(
     <React.StrictMode>
@@ -17,6 +18,7 @@ root.render(
 
 
 const SendAnalytics = () => {
+    console.log('Here', window.location.pathname);
     ReactGA.send({
         hitType: "pageview",
         page: window.location.pathname,
